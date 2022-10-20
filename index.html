@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 class="t1">Caça-Palavras</h1>
+    <h2 class="t3">Tema: Anime</h2>
+    <h1 class="t2">Tanjiro - Sasuke - Nezuko - Tsunade - Tomioka - Zenitsu - Naruto - Jiraya - Inosuke - Sakura</h1>
+
+
+    <center>
+    <table border = "3" width="500" height="500">
+        <script>
+                matriz = new Array;
+            matriz = [["W","T", "A", "N","J","I", "R", "O", "N","V"], ["Q","V", "G", "S", "A", "S","U","K","E","J"],["R","N", "H", "A", "B", "X","I","B","Z","A"], ["O","Z", "C", "N", "J", "U","L","T","U","N"] , ["T","I","N","A","T","J", "Z", "M", "K", "T"],["O", "J", "I", "R", "A", "Y", "A", "I", "O", "S"],["M","L", "F", "U","M","H", "Z", "N","L", "U"],["I", "H", "Y", "T","A","F","X","O","H","N"],["O","G","S","O","Y","K","Z","S","G","A"],["K","Z","E","N","I","T","S","U","V","D"],["A","E","Q","V","B","P","X","K","A","E"],["B","A","E","Y","W","M","Z","E","C","A"],["S","A","K","U","R","A","Y","H","F","L"]];
+
+            binario = new Array;
+            binario = [[0, 1, 1, 1, 1, 1, 1, 1, 1, 0],[0, 0, 0, 1, 1, 1, 1, 1, 1, 0],[0, 0, 0, 0, 0, 0, 0, 0, 1, 0],[0, 0, 0, 1, 0, 0, 0, 0, 1, 0],[1, 0, 0, 1, 0, 0, 0, 0, 1, 1],[1, 1, 1, 1, 1, 1, 1, 1, 1,1],[1,0,0,1,0,0,0,1,0,1],[1,0,0,1,0,0,0,1,0,1],[1,0,0,1,0,0,0,1,0,1],[1,1,1,1,1,1,1,1,0,1],[1,0,0,0,0,0,0,1,0,1],[0,0,0,0,0,0,0,1,0,0],[1,1,1,1,1,1,0,0,0,0]];
+
+
+            for(linha=0; linha<13; linha++){
+
+                document.write("<tr>");
+
+                for(coluna=0; coluna<10; coluna++){
+                    if(binario[linha][coluna] == 1){
+                        document.write("<td bgcolor='#2E165B'>" + matriz[linha][coluna] + "</td>");
+                    }
+
+                    else{
+                        document.write("<td>" + matriz[linha][coluna] + "</td>");
+                    }
+                }
+                document.write("</tr>")
+            
+
+        
+            }
+
+           
+        </script>
+        </table>
+    </center>
+</body>
+</html>
